@@ -1,6 +1,16 @@
 <div *ngFor="let gasolinera of listaGasolinera">
-  <p>
-    Nombre: {{gasolinera['Rótulo']}}
-  </p>
+  <mat-card>
+    <mat-card-content>
+        <h3 class="ellipsis">{{gasolinera['Rótulo']}}</h3>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <p>Precio Gasoleo A: {{gasolinera['Precio Gasoleo A']}}</p>
+        <p>Precio Hidrogeno: {{gasolinera['Precio Hidrogeno']}}</p>
+        <p>Precio Gasolina 98 E5: {{gasolinera['Precio Gasolina 98 E5']}}</p>
+
+
+      </mat-card-actions>
+</mat-card>
 </div>
 

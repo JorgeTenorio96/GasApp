@@ -14,6 +14,7 @@ export class ListaGasolinerasComponent implements OnInit {
   constructor(private gasolineraService: GasolineraService) { }
 
   ngOnInit(): void {
+    this.getListaGasolinera();
   }
 
   getListaGasolinera(){
