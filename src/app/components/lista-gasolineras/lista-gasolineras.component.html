@@ -1,3 +1,20 @@
+<div>
+  <mat-form-field appearance="fill">
+      <mat-label>Filtrar por Provincia</mat-label>
+      <mat-select name="provincia" [(ngModel)]="provinciaArray" multiple>
+      <mat-option *ngFor="let p of listaProvincias" [value]="p.IDPovincia">
+        {{p.Provincia}}
+      </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="filtrarProvincia()">Filtrar</button>
+<button mat-raised-button color="warn" (click)="quitarFiltro()">Eliminar Filtro<mat-icon>delete</mat-icon></button>
+</div>
+
+
+
+
+
 <div *ngFor="let gasolinera of listaGasolinera">
   <mat-card>
     <mat-card-content>
@@ -5,9 +22,12 @@
 
     </mat-card-content>
     <mat-card-actions>
-        <p>Precio Gasoleo A: {{gasolinera['Precio Gasoleo A']}}</p>
-        <p>Precio Hidrogeno: {{gasolinera['Precio Hidrogeno']}}</p>
-        <p>Precio Gasolina 98 E5: {{gasolinera['Precio Gasolina 98 E5']}}</p>
+        <p>Dirección: {{gasolinera['Dirección']}}</p>
+        <br>
+        <p>Precio Gasoleo A: {{gasolinera['Precio Gasoleo A']}} €/L</p>
+        <p>Precio Hidrogeno: {{gasolinera['Precio Hidrogeno']}} €/L</p>
+        <p>Precio Gasolina 98 E5: {{gasolinera['Precio Gasolina 98 E5']}} €/L</p>
+        <p>Provincia: {{gasolinera['Provincia']}}</p>
 
 
       </mat-card-actions>

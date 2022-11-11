@@ -36,3 +36,18 @@ export interface GasolineraResponse {
   Fecha: string;
   ListaEESSPrecio: Gasolinera[];
 }
+export interface ProvinciaResponse {
+  IDPovincia: string;
+  IDCCAA:     string;
+  Provincia:  string;
+  CCAA:       string;
+}
+
+export interface MunicipioResponse {
+  IDMunicipio: string;
+  IDProvincia: string;
+  IDCCAA:      string;
+  Municipio:   string;
+  Provincia:   string;
+  CCAA:        string;
+}
