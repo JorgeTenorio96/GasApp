@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaGasolinerasComponent } from './components/lista-gasolineras/lista-gasolineras.component';
+import { GasolineraListComponent } from './components/gasolinera-list/gasolinera-list.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full' , redirectTo: 'gasolinera'},
-  {path: 'gasolinera', component: ListaGasolinerasComponent}
+  { path:'', component: GasolineraListComponent }
+ 
 ];
 
 @NgModule({

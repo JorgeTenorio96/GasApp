@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "3763db0e-277b-4b35-b647-6ce1e006019e"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GasApp": {
+    "mini-proyecto": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/gas-app",
+            "outputPath": "dist/mini-proyecto",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "GasApp:build:production"
+              "browserTarget": "mini-proyecto:build:production"
             },
             "development": {
-              "browserTarget": "GasApp:build:development"
+              "browserTarget": "mini-proyecto:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "GasApp:build"
+            "browserTarget": "mini-proyecto:build"
           }
         },
         "test": {
@@ -100,7 +107,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "mini-proyecto"
 }

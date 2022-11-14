@@ -4,24 +4,40 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import { ImportsMaterialModule } from './modules/imports-material.module';
+
 import { HttpClientModule } from '@angular/common/http';
-import { ListaGasolinerasComponent } from './components/lista-gasolineras/lista-gasolineras.component';
+import { MaterialImportsModule } from './modules/material-imports.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GasolineraItemComponent } from './components/gasolinera-item/gasolinera-item.component';
+import { GasolineraListComponent } from './components/gasolinera-list/gasolinera-list.component';
+import {MatSliderModule} from '@angular/material/slider';
+import { DialogGasolineraDetailComponent } from './dialogs/dialog-gasolinera-detail/dialog-gasolinera-detail.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaGasolinerasComponent
+    GasolineraItemComponent,
+    GasolineraListComponent,
+    DialogGasolineraDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ImportsMaterialModule,
+    MaterialImportsModule,
     HttpClientModule,
-
+    FlexLayoutModule,
+    FormsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatToolbarModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
